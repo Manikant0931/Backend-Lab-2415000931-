@@ -50,4 +50,23 @@ app.get("/create-course",(req, res)=>{
   }
 });
 
+app.get("/profile",(req,res)=>{
+  if(req.session.user){
+    res.send(req.session.user.name+"-"+req.session.user.role);
+  }else {
+    res.send("try to login first.");
+  }
+});
+app.get("/logout",(req, res)=>{
+    req.session.user = null;
+    res.clearCookie("user");
+  res.send("logged out successfully.");
+});
+
+app.listen(3000);
+console.log("app is running at http://localhost:3000")
+
+
+
+
 
