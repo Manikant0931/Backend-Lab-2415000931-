@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev":"nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +14,11 @@
   "type": "commonjs",
   "dependencies": {
     "cookie": "^1.1.1",
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
+    "express-session": "^1.19.0",
     "nodemon": "^3.1.14",
-    "parser": "^0.1.4"
+    "parser": "^0.1.4",
+    "session": "^0.1.0"
   }
 }
